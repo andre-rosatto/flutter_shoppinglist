@@ -31,7 +31,7 @@ void main() {
         onSurface: Color.fromRGBO(200, 200, 200, 1),
       ),
     ),
-    themeMode: ThemeMode.dark,
+    themeMode: ThemeMode.system,
     initialRoute: '/',
     routes: {
       '/': (context) => Home(),
