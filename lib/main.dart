@@ -5,6 +5,7 @@ import 'package:shopping_list/pages/shopping_list_view.dart';
 void main() {
   runApp(MaterialApp(
     title: 'ShoppingList',
+    debugShowCheckedModeBanner: false,
     theme: ThemeData(
       colorScheme: ColorScheme(
         brightness: Brightness.light,
