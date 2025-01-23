@@ -74,11 +74,11 @@ class _ToggleInputState extends State<ToggleInput> {
               widget.text,
               style: TextStyle(
                 color: widget.isComplete
-                    ? Theme.of(context).colorScheme.outlineVariant
-                    : Theme.of(context).colorScheme.inverseSurface,
+                    ? Theme.of(context).colorScheme.onSecondary
+                    : Theme.of(context).colorScheme.onSurface,
                 decorationColor: widget.isComplete
-                    ? Theme.of(context).colorScheme.outlineVariant
-                    : Theme.of(context).colorScheme.inverseSurface,
+                    ? Theme.of(context).colorScheme.onSecondary
+                    : Theme.of(context).colorScheme.onSurface,
                 fontSize: 18.0,
                 decoration: widget.isComplete
                     ? TextDecoration.lineThrough

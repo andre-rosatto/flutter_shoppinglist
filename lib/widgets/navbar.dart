@@ -38,18 +38,10 @@ class _NavbarState extends State<Navbar> {
             icon: pages[i]['icon'],
             label: pages[i]['label'],
           ),
-        // BottomNavigationBarItem(
-        //   icon: Icon(Icons.list),
-        //   label: pages[0]['label'],
-        // ),
-        // BottomNavigationBarItem(
-        //   icon: Icon(Icons.price_check),
-        //   label: pages[1]['label'],
-        // ),
       ],
       currentIndex: widget.index,
       selectedItemColor: Theme.of(context).colorScheme.onPrimary,
-      unselectedItemColor: Theme.of(context).colorScheme.onPrimaryContainer,
+      unselectedItemColor: Theme.of(context).colorScheme.onSecondary,
       onTap: (index) {
         Navigator.pushReplacement(context,
             MaterialPageRoute(builder: (context) => pages[index]['widget']));

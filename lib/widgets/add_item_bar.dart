@@ -48,7 +48,7 @@ class _AddItemBarState extends State<AddItemBar> {
           icon: Icon(
             Icons.add_circle_outline,
             size: 40.0,
-            color: Theme.of(context).colorScheme.primary,
+            color: Theme.of(context).colorScheme.onSurface,
           ),
         ),
       ],
