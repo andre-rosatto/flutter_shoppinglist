@@ -90,29 +90,26 @@ class _ToggleInputState extends State<ToggleInput> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SizedBox(width: 10.0),
-            if (widget.isComplete) Icon(Icons.check),
-            if (!isEditing) SizedBox(width: 10.0),
-            Expanded(
-              child: getWidget(),
+    return Card(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          SizedBox(width: 10.0),
+          if (widget.isComplete) Icon(Icons.check),
+          if (!isEditing) SizedBox(width: 10.0),
+          Expanded(
+            child: getWidget(),
+          ),
+          IconButton(
+            onPressed: widget.onDeleted,
+            icon: Icon(
+              Icons.delete_forever,
+              color: Colors.red,
+              size: 40.0,
             ),
-            IconButton(
-              onPressed: widget.onDeleted,
-              icon: Icon(
-                Icons.delete_forever,
-                color: Colors.red,
-                size: 40.0,
-              ),
-            ),
-          ],
-        ),
-        Divider(),
-      ],
+          ),
+        ],
+      ),
     );
   }
 }

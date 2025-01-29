@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_list/pages/compare.dart';
 import 'package:shopping_list/pages/home.dart';
+import 'package:shopping_list/pages/notes.dart';
 
 class Navbar extends StatefulWidget {
   final int index;
@@ -20,6 +21,11 @@ class _NavbarState extends State<Navbar> {
       'label': 'Listas',
       'icon': Icon(Icons.list),
       'widget': Home(),
+    },
+    {
+      'label': 'Anotações',
+      'icon': Icon(Icons.text_snippet),
+      'widget': Notes(),
     },
     {
       'label': 'Comparar',

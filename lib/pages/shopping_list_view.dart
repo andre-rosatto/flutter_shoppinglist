@@ -90,6 +90,7 @@ class _ShoppingListViewState extends State<ShoppingListView> {
               itemBuilder: (context, index) {
                 return ToggleInput(
                   items[index].title,
+                  key: items[index].key,
                   isComplete: items[index].bought,
                   onDeleted: () => onDeleted(index),
                   onChanged: (newValue) => onChanged(index, newValue),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_list/pages/home.dart';
+import 'package:shopping_list/pages/notes.dart';
 import 'package:shopping_list/pages/shopping_list_view.dart';
 
 void main() {
@@ -36,6 +37,7 @@ void main() {
     initialRoute: '/',
     routes: {
       '/': (context) => Home(),
+      '/notes': (context) => Notes(),
       '/list_view': (context) => ShoppingListView(),
     },
   ));

@@ -85,6 +85,7 @@ class _HomeState extends State<Home> {
               itemBuilder: (context, index) {
                 return ToggleInput(
                   _lists[index].title,
+                  key: _lists[index].key,
                   isComplete: _lists[index].isComplete,
                   onDeleted: () => onDeleted(index),
                   onChanged: (newValue) => onChanged(index, newValue),

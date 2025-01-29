@@ -104,7 +104,7 @@ class _CompareState extends State<Compare> {
           ),
         ],
       ),
-      bottomNavigationBar: Navbar(index: 1),
+      bottomNavigationBar: Navbar(index: 2),
     );
   }
 }

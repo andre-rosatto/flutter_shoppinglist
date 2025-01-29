@@ -1,12 +1,16 @@
+import 'package:flutter/material.dart';
 import 'package:shopping_list/utils/shopping_item.dart';
 
 class ShoppingList {
   String title;
   List<ShoppingItem> items = [];
+  UniqueKey key;
 
-  ShoppingList(this.title);
+  ShoppingList(this.title) : key = UniqueKey();
 
-  ShoppingList.fromJson(Map json) : title = json['title'] {
+  ShoppingList.fromJson(Map json)
+      : title = json['title'],
+        key = UniqueKey() {
     List jsonItems = json['items'];
     items = jsonItems.map((item) => ShoppingItem.fromJson(item)).toList();
   }
