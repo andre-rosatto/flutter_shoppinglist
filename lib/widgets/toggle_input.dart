@@ -33,33 +33,29 @@ class _ToggleInputState extends State<ToggleInput> {
 
   Widget getWidget() {
     return isEditing
-        ? Expanded(
-            child: Expanded(
-              child: FocusScope(
-                onFocusChange: (hasFocus) {
-                  if (hasFocus) {
-                    _controller.selection = TextSelection(
-                        baseOffset: 0, extentOffset: _controller.text.length);
-                  } else {
-                    onFocusLost();
-                  }
-                },
-                child: TextField(
-                  controller: _controller,
-                  autofocus: true,
-                  style: TextStyle(
-                    fontSize: 18.0,
+        ? FocusScope(
+            onFocusChange: (hasFocus) {
+              if (hasFocus) {
+                _controller.selection = TextSelection(
+                    baseOffset: 0, extentOffset: _controller.text.length);
+              } else {
+                onFocusLost();
+              }
+            },
+            child: TextField(
+              controller: _controller,
+              autofocus: true,
+              style: TextStyle(
+                fontSize: 18.0,
+              ),
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    width: 1.0,
                   ),
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        width: 1.0,
-                      ),
-                    ),
-                  ),
-                  onTapOutside: (event) => onFocusLost(),
                 ),
               ),
+              onTapOutside: (event) => onFocusLost(),
             ),
           )
         : GestureDetector(
@@ -91,6 +87,15 @@ class _ToggleInputState extends State<ToggleInput> {
   @override
   Widget build(BuildContext context) {
     return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(8.0),
+        ),
+        side: BorderSide(
+          color: Theme.of(context).colorScheme.primary,
+          width: 1.0,
+        ),
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

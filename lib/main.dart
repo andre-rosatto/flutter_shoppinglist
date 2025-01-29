@@ -23,7 +23,7 @@ void main() {
     darkTheme: ThemeData(
       colorScheme: ColorScheme(
         brightness: Brightness.dark,
-        primary: Color.fromRGBO(150, 0, 90, 1),
+        primary: Color.fromRGBO(172, 83, 136, 1),
         onPrimary: Colors.white,
         secondary: Colors.grey,
         onSecondary: Color.fromRGBO(255, 255, 255, 0.5),
