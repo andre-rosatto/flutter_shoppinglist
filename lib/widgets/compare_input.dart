@@ -97,7 +97,12 @@ class _CompareInputState extends State<CompareInput> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Preço'),
+                              Text(
+                                'Preço',
+                                style: TextStyle(
+                                  fontSize: 12.0,
+                                ),
+                              ),
                               FocusScope(
                                 onFocusChange: (hasFocus) {
                                   if (hasFocus) {
@@ -111,8 +116,16 @@ class _CompareInputState extends State<CompareInput> {
                                 },
                                 child: TextField(
                                   controller: _priceController,
+                                  keyboardType: TextInputType.number,
+                                  style: TextStyle(
+                                    fontSize: 14.0,
+                                  ),
                                   decoration: InputDecoration(
                                     border: OutlineInputBorder(),
+                                    contentPadding: EdgeInsets.symmetric(
+                                      horizontal: 8.0,
+                                      vertical: 0.0,
+                                    ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         width: 1.0,
@@ -139,7 +152,12 @@ class _CompareInputState extends State<CompareInput> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Quantidade'),
+                              Text(
+                                'Quantidade',
+                                style: TextStyle(
+                                  fontSize: 12.0,
+                                ),
+                              ),
                               FocusScope(
                                 onFocusChange: (hasFocus) {
                                   if (hasFocus) {
@@ -153,7 +171,15 @@ class _CompareInputState extends State<CompareInput> {
                                 },
                                 child: TextField(
                                   controller: _amountController,
+                                  keyboardType: TextInputType.number,
+                                  style: TextStyle(
+                                    fontSize: 14.0,
+                                  ),
                                   decoration: InputDecoration(
+                                    contentPadding: EdgeInsets.symmetric(
+                                      horizontal: 8.0,
+                                      vertical: 0.0,
+                                    ),
                                     border: OutlineInputBorder(),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
@@ -180,7 +206,12 @@ class _CompareInputState extends State<CompareInput> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Preço/Quant.'),
+                            Text(
+                              'Preço/Quant.',
+                              style: TextStyle(
+                                fontSize: 12.0,
+                              ),
+                            ),
                             Expanded(
                               child: Center(
                                 child: Text(
