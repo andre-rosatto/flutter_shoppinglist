@@ -24,7 +24,7 @@ class _AddItemBarState extends State<AddItemBar> {
       children: [
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(8.0, 8.0, 0, 8.0),
+            padding: const EdgeInsets.fromLTRB(4.0, 8.0, 0, 4.0),
             child: TextField(
               controller: _controller,
               decoration: InputDecoration(

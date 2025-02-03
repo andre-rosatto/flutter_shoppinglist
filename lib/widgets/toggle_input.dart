@@ -49,6 +49,7 @@ class _ToggleInputState extends State<ToggleInput> {
                 fontSize: 18.0,
               ),
               decoration: InputDecoration(
+                isDense: true,
                 border: OutlineInputBorder(
                   borderSide: BorderSide(
                     width: 1.0,
@@ -86,26 +87,24 @@ class _ToggleInputState extends State<ToggleInput> {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(
-          Radius.circular(8.0),
-        ),
-        side: BorderSide(
-          color: Theme.of(context).colorScheme.primary,
-          width: 1.0,
-        ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 4.0,
+        vertical: 2.0,
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SizedBox(width: 10.0),
-          if (widget.isComplete) Icon(Icons.check),
-          if (!isEditing) SizedBox(width: 10.0),
-          Expanded(
-            child: getWidget(),
+      child: ListTile(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(4.0)),
+          side: BorderSide(
+            color: Theme.of(context).colorScheme.primary,
+            width: 1.0,
           ),
-          IconButton(
+        ),
+        leading: widget.isComplete ? Icon(Icons.check) : null,
+        title: getWidget(),
+        trailing: Transform.translate(
+          offset: Offset(24.0, 0),
+          child: IconButton(
             onPressed: widget.onDeleted,
             icon: Icon(
               Icons.delete_forever,
@@ -113,7 +112,7 @@ class _ToggleInputState extends State<ToggleInput> {
               size: 40.0,
             ),
           ),
-        ],
+        ),
       ),
     );
   }

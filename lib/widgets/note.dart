@@ -35,41 +35,41 @@ class _NoteState extends State<Note> {
           widget.onChanged(_controller.text);
         }
       },
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(8.0),
-          ),
-          side: BorderSide(
-            color: Theme.of(context).colorScheme.primary,
-            width: 1.0,
-          ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 4.0,
+          vertical: 2.0,
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: TextField(
-                  controller: _controller,
-                  autofocus: true,
-                  maxLines: null,
-                  focusNode: _focusNode,
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                  ),
-                ),
+        child: ListTile(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(8.0),
+            ),
+            side: BorderSide(
+              color: Theme.of(context).colorScheme.primary,
+              width: 1.0,
+            ),
+          ),
+          title: TextField(
+            controller: _controller,
+            autofocus: true,
+            maxLines: null,
+            focusNode: _focusNode,
+            decoration: InputDecoration(
+              isDense: true,
+              border: InputBorder.none,
+            ),
+          ),
+          trailing: Transform.translate(
+            offset: Offset(24.0, 0),
+            child: IconButton(
+              onPressed: widget.onDeleted,
+              icon: Icon(
+                Icons.delete_forever,
+                color: Colors.red,
+                size: 40.0,
               ),
-              IconButton(
-                onPressed: widget.onDeleted,
-                icon: Icon(
-                  Icons.delete_forever,
-                  color: Colors.red,
-                  size: 40.0,
-                ),
-              ),
-            ],
+            ),
           ),
         ),
       ),
