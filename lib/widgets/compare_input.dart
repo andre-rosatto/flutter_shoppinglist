@@ -121,10 +121,11 @@ class _CompareInputState extends State<CompareInput> {
                                     fontSize: 14.0,
                                   ),
                                   decoration: InputDecoration(
+                                    isDense: true,
                                     border: OutlineInputBorder(),
                                     contentPadding: EdgeInsets.symmetric(
                                       horizontal: 8.0,
-                                      vertical: 0.0,
+                                      vertical: 2.0,
                                     ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
@@ -176,9 +177,10 @@ class _CompareInputState extends State<CompareInput> {
                                     fontSize: 14.0,
                                   ),
                                   decoration: InputDecoration(
+                                    isDense: true,
                                     contentPadding: EdgeInsets.symmetric(
                                       horizontal: 8.0,
-                                      vertical: 0.0,
+                                      vertical: 2.0,
                                     ),
                                     border: OutlineInputBorder(),
                                     enabledBorder: OutlineInputBorder(
